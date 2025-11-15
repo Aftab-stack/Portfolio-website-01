@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My portfolio website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" alt="" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Front-end Developer</p>
+          <h1>
+            Hi , I'm <span>Mohd Aftab</span> <br />
+            and I am a BCA student.
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------About--------- -->
+
+    <div class="about">
+      <div class="row">
+        <div class="colum1">
+          <img src="khan.jpg" alt="" />
+        </div>
+        <div class="colum2">
+          <h1>About me</h1>
+          <p>
+            Hi, I'm Mohd Aftab, a passionate Frontend Developer and a BCA
+            2nd-year student at United University, Prayagraj. <br /><br />
+            I love turning creative ideas into responsive, user-friendly, and
+            visually appealing websites. Currently, I'm focusing on mastering
+            HTML, CSS, JavaScript, and modern frontend frameworks to build
+            seamless web experiences. <br /><br />
+            I'm always curious to learn new technologies and improve my
+            development skills. My goal is to grow as a full-stack developer and
+            contribute to building innovative digital solutions.
+          </p>
+
+          <div class="tab-titles">
+            <p class="links active" onclick="opentab('Skills')">Skills</p>
+            <p class="links" onclick="opentab('Education')">Education</p>
+          </div>
+          <div class="contents display-contents" id="Skills">
+            <ul>
+              <li><span>UI/UX</span><br />Designing Web / App interfaces</li>
+              <li><span>Web Development</span><br />Web App development</li>
+              <li><span>App Development</span><br />Building Android apps</li>
+            </ul>
+          </div>
+          <div class="contents" id="Education">
+            <ul>
+              <li>
+                <span>2025</span><br />BCA from United University Allahabad
+              </li>
+              <li><span>2023</span><br />DCA from Data Institute Allahabad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------Portfolio-------- -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="title">My Works</h1>
+        <div class="worklist">
+          <div class="works">
+            <img src="images/work-1.png" alt="" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                is a software program designed to perform specific tasks or
+                provide certain services for the user.
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="works">
+            <img src="images/work-2.png" alt="" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>
+                is a software program designed to perform specific tasks or
+                provide certain services for the user.
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="works">
+            <img src="images/work-3.png" alt="" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                is a software program designed to perform specific tasks or
+                provide certain services for the user.
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+    <script>
+      var tablinks = document.getElementsByClassName("links");
+      var contents = document.getElementsByClassName("contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active");
+        }
+        for (content of contents) {
+          content.classList.remove("display-contents");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("display-contents");
+      }
+    </script>
+  </body>
+</html>
